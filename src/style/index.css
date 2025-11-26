@@ -1,0 +1,1664 @@
+* {
+    font-family: "Geologica", sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    direction: ltr;
+    background: #344966;
+    color: white;
+    font-family: "Geologica", sans-serif;
+}
+
+
+
+/* ...existing code... */
+/* بنر تمام عرض (edge-to-edge) */
+.banner {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* تصویر بنر: پوشش کامل و واکنش‌گرا */
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px0px;
+    max-width: none;
+    object-fit: cover;
+    /* کراپ هوشمند برای پوشش کامل */
+}
+
+/* واکنش‌گرا: قواعد ارتفاع در موبایل */
+@media (max-width: 640px) {
+    .banner img {
+        height: 260px;
+    }
+}
+
+/* ...existing code... */
+/* ...existing code... */
+
+.banner-text {
+    margin: 16px auto;
+    text-align: center;
+    color: white;
+    display: block;
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    transition: transform 250ms ease;
+
+}
+
+/* تصحیح نام keyframes (مطابقت با animation-name) */
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+        /* از پایین بیاد بالا: مثبت به منفی یا برعکس بسته به نیاز */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 3.5em;
+    opacity: 0.5;
+}
+
+.hr-text:before {
+    content: "";
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+
+.hr-text:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    color: #818078;
+    background-color: #fcfcfa;
+}
+
+
+.sketchy {
+    padding: 2rem 2rem;
+    display: inline-block;
+    border: 3px solid #9493907a;
+    font-size: 1rem;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    background: #344966;
+    position: relative;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 400px;
+    box-shadow: rgba(214, 214, 214, 0.822) 0px 2px 8px0px;
+
+    &::before {
+        content: "";
+        border: 2px solid#9493907a;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        box-shadow: rgba(214, 214, 214, 0.822) 0px 2px 8px 0px;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
+
+    .detail {
+        font-family: "Geologica", sans-serif;
+    }
+}
+
+/* start frame for section instagram */
+.heading-frame {
+    display: grid;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+    grid-template-columns: -webkit-max-content auto;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto max-content;
+    background: #333 url(../images/watches/omegaa.jpg) center;
+    background-size: cover;
+    filter: grayscale(100%);
+    transform: scale(1);
+    transition:
+        filter 0.4s ease-in-out,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    color: white;
+    width: 600px;
+    height: 500px;
+    padding: 2rem;
+}
+
+.heading-frame:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+}
+
+.heading-frame:before,
+.heading-frame:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+}
+
+.heading-frame:before {
+    grid-row: 1/2;
+    border-right: none;
+    border-bottom: none;
+}
+
+.heading-frame:after {
+    grid-row: 1/span 2;
+    border-left: none;
+}
+
+.heading-frame h2 {
+    margin: 1rem 1rem -0.5rem 0;
+    font-family: "Geologica", sans-serif;
+    font-size: 2rem;
+    max-width: 100%;
+}
+
+.instagram {
+    display: flex;
+
+    align-items: center;
+
+
+}
+
+.instagram-text {
+    position: relative;
+    padding: 50px 0;
+    max-width: 700px;
+    font-family: "Geologica", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: left;
+
+
+}
+
+
+
+/* خط بالا */
+.instagram-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #344966, transparent);
+}
+
+/* خط پایین */
+.instagram-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #344966, transparent);
+}
+
+.button-52 {
+    display: inline-flex;
+    /* مثل یک دکمه واقعی */
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    font-size: 14px;
+    /* از 16px کوچیک‌تر و کنترل شده */
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    padding: 10px 20px;
+    /* کمی کمتر از قبل که ظریف‌تر بشه */
+    line-height: 1;
+
+    outline: 0;
+    border: 2px solid white;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+
+    touch-action: manipulation;
+    color: black;
+    z-index: 0;
+    overflow: hidden;
+    text-decoration: none;
+
+}
+
+.button-52::after {
+    content: "";
+    background-color: #d5ac5a;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+.button-52:hover::after {
+    top: 0;
+    left: 0;
+}
+
+@media (min-width: 768px) {
+    .button-52 {
+        padding: 13px 50px;
+    }
+}
+
+/* start frame for section website */
+.website-text {
+    position: relative;
+    padding: 50px 0;
+    max-width: 700px;
+    font-family: "Geologica", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: left;
+
+
+}
+
+/* خط بالا */
+.website-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #344966, transparent);
+}
+
+/* خط پایین */
+.website-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #344966, transparent);
+}
+
+
+.heading-frame1 {
+    display: grid;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+    grid-template-columns: -webkit-max-content auto;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto max-content;
+    background: #333 url(../images/watches/rolex.jpg) center;
+    background-size: cover;
+    filter: grayscale(100%);
+    transform: scale(1);
+    transition:
+        filter 0.4s ease-in-out,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    color: white;
+    width: 600px;
+    height: 500px;
+    padding: 2rem;
+}
+
+.heading-frame1:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+}
+
+.heading-frame1:before,
+.heading-frame1:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+}
+
+.heading-frame1:before {
+    grid-row: 1/2;
+    border-right: none;
+    border-bottom: none;
+}
+
+.heading-frame1:after {
+    grid-row: 1/span 2;
+    border-left: none;
+}
+
+.heading-frame1 h2 {
+    margin: 1rem 1rem -0.5rem 0;
+    font-family: "Geologica", sans-serif;
+    font-size: 2rem;
+    max-width: 100%;
+}
+
+/* endframe for section website */
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* حالت اولیه: آماده انیمیشن، ولی هنوز اجرا نشه */
+.instagram.animate-slide-in-left,
+.website.animate-slide-in-right {
+    opacity: 0;
+    transform: translateX(0);
+    /* مقدار اولیه، مهم نیست زیاد چون تو keyframes اوکی می‌شه */
+}
+
+/* وقتی تو ویو میان، با in-view انیمیشن فعال می‌شه */
+.instagram.animate-slide-in-left.in-view {
+    animation: slide-in-left 2s ease-out forwards;
+}
+
+.website.animate-slide-in-right.in-view {
+    animation: slide-in-right 2s ease-out forwards;
+}
+
+.vl {
+
+
+    position: relative;
+    width: 3.5em;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vl::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #d5ac5a, transparent);
+}
+
+.vl::after {
+    content: "";
+}
+
+.aboutus {
+    background-color: #678bb642;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+.aboutus.in-view {
+    animation: fadeInUp 0.7s forwards;
+    animation-delay: 0.2s;
+    /* هرچند دوست داری */
+}
+
+.text-section {
+    line-height: 1.6;
+    word-spacing: 1px;
+
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:576px) {
+    .banner-text {
+        margin-top: -230px;
+    }
+
+    /* کارت aboutus به شکل باکس تمیز و ستونی */
+    .aboutus {
+        width: 100%;
+        flex-direction: column;
+
+        background-color: #678bb642;
+
+
+        overflow: hidden;
+
+    }
+
+    .aboutus .img {
+        width: 100%;
+    }
+
+    .aboutus .img img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .aboutus .text-section {
+        width: 100%;
+        padding: 1.5rem 1.25rem !important;
+        text-align: left;
+        align-items: flex-start;
+        gap: 0.9rem;
+    }
+
+    .aboutus .text-section h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 0.4rem;
+    }
+
+    .aboutus .text-section p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .instagram {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        /* start frame for section instagram */
+        .heading-frame {
+            display: grid;
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+            grid-template-columns: -webkit-max-content auto;
+            grid-template-columns: max-content auto;
+            grid-template-rows: auto max-content;
+            background: #333 url(../images/watches/omegaa.jpg) center;
+            background-size: cover;
+            filter: grayscale(100%);
+            transform: scale(1);
+            transition:
+                filter 0.4s ease-in-out,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            color: white;
+            width: 350px;
+            height: 370px;
+            padding: 2rem;
+        }
+
+        .heading-frame:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+        }
+
+        .heading-frame:before,
+        .heading-frame:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .heading-frame:before {
+            grid-row: 1/2;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .heading-frame:after {
+            grid-row: 1/span 2;
+            border-left: none;
+        }
+
+        .heading-frame h2 {
+            margin: 1rem 1rem -0.5rem 0;
+            font-family: "Geologica", sans-serif;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    .button-52 {
+        display: inline-flex;
+        /* مثل یک دکمه واقعی */
+        align-items: center;
+        justify-content: center;
+        width: 55%;
+        font-size: 14px;
+        /* از 16px کوچیک‌تر و کنترل شده */
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        padding: 15px 20px;
+        /* کمی کمتر از قبل که ظریف‌تر بشه */
+        line-height: 1;
+
+        outline: 0;
+        border: 2px solid white;
+        cursor: pointer;
+        position: relative;
+        background: transparent;
+
+        color: black;
+        z-index: 0;
+
+        text-decoration: none;
+
+    }
+
+    .button-52::after {
+        content: "";
+        background-color: #d5ac5a;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        transition: 0.4s ease;
+        z-index: -1;
+    }
+
+    .button-52:hover::after {
+        top: 0;
+        left: 0;
+    }
+
+    .website {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .heading-frame1 {
+            display: grid;
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+            grid-template-columns: -webkit-max-content auto;
+            grid-template-columns: max-content auto;
+            grid-template-rows: auto max-content;
+            background: #333 url(../images/watches/rolex.jpg) center;
+            background-size: cover;
+            filter: grayscale(100%);
+            transform: scale(1);
+            transition:
+                filter 0.4s ease-in-out,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            color: white;
+            width: 350px;
+            height: 370px;
+            padding: 2rem;
+        }
+
+        .heading-frame1:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+        }
+
+        .heading-frame1:before,
+        .heading-frame1:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .heading-frame1:before {
+            grid-row: 1/2;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .heading-frame1:after {
+            grid-row: 1/span 2;
+            border-left: none;
+        }
+
+        .heading-frame1 h2 {
+            margin: 1rem 1rem -0.5rem 0;
+            font-family: "Geologica", sans-serif;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    /* خود فوتر از دو ستونه → ستونی */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .left-footer,
+    .right-footer {
+        width: 100% !important;
+    }
+
+    /* تصویر سمت چپ فوتر */
+    .left-footer img {
+        width: 65%;
+        max-width: 230px;
+    }
+
+    .left-footer h3 {
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+        line-height: 1.5;
+    }
+
+    /* خط عمودی وسط، تو موبایل حذف می‌شه */
+    .vl {
+        display: none;
+    }
+
+    /* ستون راست (آدرس) */
+    .right-footer {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .address {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        flex-wrap: wrap;
+    }
+
+    .address svg {
+        margin-right: 0.5rem;
+    }
+
+    .address b {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    /* خط جداکننده زیر فوتر کمی بهش فاصله بدیم */
+    .hr-text {
+        margin-top: -1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* کپی‌رایت پایین صفحه */
+    .copyright {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        margin-top: 0 !important;
+        text-align: center;
+    }
+
+    .copyright strong {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:768px) {
+    .banner-text {
+        margin-top: -330px;
+    }
+
+    /* کارت aboutus به شکل باکس تمیز و ستونی */
+    .aboutus {
+        width: 100%;
+        flex-direction: column;
+
+        background-color: #678bb642;
+
+
+        overflow: hidden;
+
+    }
+
+    .aboutus .img {
+        width: 100%;
+    }
+
+    .aboutus .img img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .aboutus .text-section {
+        width: 100%;
+        padding: 1.5rem 1.25rem !important;
+        text-align: left;
+        align-items: flex-start;
+        gap: 0.9rem;
+    }
+
+    .aboutus .text-section h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 0.4rem;
+    }
+
+    .aboutus .text-section p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .instagram {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        /* start frame for section instagram */
+        .heading-frame {
+            display: grid;
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+            grid-template-columns: -webkit-max-content auto;
+            grid-template-columns: max-content auto;
+            grid-template-rows: auto max-content;
+            background: #333 url(../images/watches/omegaa.jpg) center;
+            background-size: cover;
+            filter: grayscale(100%);
+            transform: scale(1);
+            transition:
+                filter 0.4s ease-in-out,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            color: white;
+            width: 350px;
+            height: 370px;
+            padding: 2rem;
+        }
+
+        .heading-frame:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+        }
+
+        .heading-frame:before,
+        .heading-frame:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .heading-frame:before {
+            grid-row: 1/2;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .heading-frame:after {
+            grid-row: 1/span 2;
+            border-left: none;
+        }
+
+        .heading-frame h2 {
+            margin: 1rem 1rem -0.5rem 0;
+            font-family: "Geologica", sans-serif;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    .button-52 {
+        display: inline-flex;
+        /* مثل یک دکمه واقعی */
+        align-items: center;
+        justify-content: center;
+        width: 55%;
+        font-size: 14px;
+        /* از 16px کوچیک‌تر و کنترل شده */
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        padding: 15px 20px;
+        /* کمی کمتر از قبل که ظریف‌تر بشه */
+        line-height: 1;
+
+        outline: 0;
+        border: 2px solid white;
+        cursor: pointer;
+        position: relative;
+        background: transparent;
+
+        color: black;
+        z-index: 0;
+
+        text-decoration: none;
+
+    }
+
+    .button-52::after {
+        content: "";
+        background-color: #d5ac5a;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        transition: 0.4s ease;
+        z-index: -1;
+    }
+
+    .button-52:hover::after {
+        top: 0;
+        left: 0;
+    }
+
+    .website {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .heading-frame1 {
+            display: grid;
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+            grid-template-columns: -webkit-max-content auto;
+            grid-template-columns: max-content auto;
+            grid-template-rows: auto max-content;
+            background: #333 url(../images/watches/rolex.jpg) center;
+            background-size: cover;
+            filter: grayscale(100%);
+            transform: scale(1);
+            transition:
+                filter 0.4s ease-in-out,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            color: white;
+            width: 350px;
+            height: 370px;
+            padding: 2rem;
+        }
+
+        .heading-frame1:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+        }
+
+        .heading-frame1:before,
+        .heading-frame1:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .heading-frame1:before {
+            grid-row: 1/2;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .heading-frame1:after {
+            grid-row: 1/span 2;
+            border-left: none;
+        }
+
+        .heading-frame1 h2 {
+            margin: 1rem 1rem -0.5rem 0;
+            font-family: "Geologica", sans-serif;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    /* خود فوتر از دو ستونه → ستونی */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .left-footer,
+    .right-footer {
+        width: 100% !important;
+    }
+
+    /* تصویر سمت چپ فوتر */
+    .left-footer img {
+        width: 65%;
+        max-width: 230px;
+    }
+
+    .left-footer h3 {
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+        line-height: 1.5;
+    }
+
+    /* خط عمودی وسط، تو موبایل حذف می‌شه */
+    .vl {
+        display: none;
+    }
+
+    /* ستون راست (آدرس) */
+    .right-footer {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .address {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        flex-wrap: wrap;
+    }
+
+    .address svg {
+        margin-right: 0.5rem;
+    }
+
+    .address b {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    /* خط جداکننده زیر فوتر کمی بهش فاصله بدیم */
+    .hr-text {
+        margin-top: -1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* کپی‌رایت پایین صفحه */
+    .copyright {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        margin-top: 0 !important;
+        text-align: center;
+    }
+
+    .copyright strong {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:992px) {
+    .banner-text {
+        margin-top: -370px;
+    }
+
+    /* کارت aboutus به شکل باکس تمیز و ستونی */
+    .aboutus {
+        width: 100%;
+        flex-direction: column;
+
+        background-color: #678bb642;
+
+
+        overflow: hidden;
+
+    }
+
+    .aboutus .img {
+        width: 100%;
+    }
+
+    .aboutus .img img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .aboutus .text-section {
+        width: 100%;
+        padding: 1.5rem 1.25rem !important;
+        text-align: left;
+        align-items: flex-start;
+        gap: 0.9rem;
+    }
+
+    .aboutus .text-section h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 0.4rem;
+    }
+
+    .aboutus .text-section p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .instagram {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        /* start frame for section instagram */
+        .heading-frame {
+            display: grid;
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+            grid-template-columns: -webkit-max-content auto;
+            grid-template-columns: max-content auto;
+            grid-template-rows: auto max-content;
+            background: #333 url(../images/watches/omegaa.jpg) center;
+            background-size: cover;
+            filter: grayscale(100%);
+            transform: scale(1);
+            transition:
+                filter 0.4s ease-in-out,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            color: white;
+            width: 350px;
+            height: 370px;
+            padding: 2rem;
+        }
+
+        .heading-frame:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+        }
+
+        .heading-frame:before,
+        .heading-frame:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .heading-frame:before {
+            grid-row: 1/2;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .heading-frame:after {
+            grid-row: 1/span 2;
+            border-left: none;
+        }
+
+        .heading-frame h2 {
+            margin: 1rem 1rem -0.5rem 0;
+            font-family: "Geologica", sans-serif;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    .button-52 {
+        display: inline-flex;
+        /* مثل یک دکمه واقعی */
+        align-items: center;
+        justify-content: center;
+        width: 55%;
+        font-size: 14px;
+        /* از 16px کوچیک‌تر و کنترل شده */
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        padding: 15px 20px;
+        /* کمی کمتر از قبل که ظریف‌تر بشه */
+        line-height: 1;
+
+        outline: 0;
+        border: 2px solid white;
+        cursor: pointer;
+        position: relative;
+        background: transparent;
+
+        color: black;
+        z-index: 0;
+
+        text-decoration: none;
+
+    }
+
+    .button-52::after {
+        content: "";
+        background-color: #d5ac5a;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        transition: 0.4s ease;
+        z-index: -1;
+    }
+
+    .button-52:hover::after {
+        top: 0;
+        left: 0;
+    }
+
+    .website {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .heading-frame1 {
+            display: grid;
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+            grid-template-columns: -webkit-max-content auto;
+            grid-template-columns: max-content auto;
+            grid-template-rows: auto max-content;
+            background: #333 url(../images/watches/rolex.jpg) center;
+            background-size: cover;
+            filter: grayscale(100%);
+            transform: scale(1);
+            transition:
+                filter 0.4s ease-in-out,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            color: white;
+            width: 350px;
+            height: 370px;
+            padding: 2rem;
+        }
+
+        .heading-frame1:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+        }
+
+        .heading-frame1:before,
+        .heading-frame1:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .heading-frame1:before {
+            grid-row: 1/2;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .heading-frame1:after {
+            grid-row: 1/span 2;
+            border-left: none;
+        }
+
+        .heading-frame1 h2 {
+            margin: 1rem 1rem -0.5rem 0;
+            font-family: "Geologica", sans-serif;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    /* خود فوتر از دو ستونه → ستونی */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .left-footer,
+    .right-footer {
+        width: 100% !important;
+    }
+
+    /* تصویر سمت چپ فوتر */
+    .left-footer img {
+        width: 65%;
+        max-width: 230px;
+    }
+
+    .left-footer h3 {
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+        line-height: 1.5;
+    }
+
+    /* خط عمودی وسط، تو موبایل حذف می‌شه */
+    .vl {
+        display: none;
+    }
+
+    /* ستون راست (آدرس) */
+    .right-footer {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .address {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        flex-wrap: wrap;
+    }
+
+    .address svg {
+        margin-right: 0.5rem;
+    }
+
+    .address b {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    /* خط جداکننده زیر فوتر کمی بهش فاصله بدیم */
+    .hr-text {
+        margin-top: -1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* کپی‌رایت پایین صفحه */
+    .copyright {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        margin-top: 0 !important;
+        text-align: center;
+    }
+
+    .copyright strong {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1200px) {
+    .banner-text {
+        margin-top: -70px;
+    }
+
+    .aboutus {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: stretch;
+        /* هر دو ستون هم‌ارتفاع */
+    }
+
+    .aboutus .img,
+    .aboutus .text-section {
+        flex: 1 1 0;
+        /* دو ستون مساوی */
+    }
+
+    .aboutus .img img {
+        width: 100%;
+        height: 100%;
+        /* اینجا جادو اتفاق می‌افته */
+        object-fit: cover;
+        /* عکس قشنگ کراپ میشه، کش نمیاد */
+        display: block;
+    }
+
+    .aboutus .text-section {
+        width: 100%;
+        padding: 1.5rem 1.25rem !important;
+        text-align: left;
+        align-items: flex-start;
+        gap: 0.9rem;
+    }
+
+    .aboutus .text-section h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 0.4rem;
+    }
+
+    .aboutus .text-section p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .instagram {
+
+
+        /* start frame for section instagram */
+        .heading-frame {
+            display: grid;
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+            grid-template-columns: -webkit-max-content auto;
+            grid-template-columns: max-content auto;
+            grid-template-rows: auto max-content;
+            background: #333 url(../images/watches/omegaa.jpg) center;
+            background-size: cover;
+            filter: grayscale(100%);
+            transform: scale(1);
+            transition:
+                filter 0.4s ease-in-out,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            color: white;
+            width: 350px;
+            height: 370px;
+            padding: 2rem;
+        }
+
+        .heading-frame:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+        }
+
+        .heading-frame:before,
+        .heading-frame:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .heading-frame:before {
+            grid-row: 1/2;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .heading-frame:after {
+            grid-row: 1/span 2;
+            border-left: none;
+        }
+
+        .heading-frame h2 {
+            margin: 1rem 1rem -0.5rem 0;
+            font-family: "Geologica", sans-serif;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    .button-52 {
+        display: inline-flex;
+        /* مثل یک دکمه واقعی */
+        align-items: center;
+        justify-content: center;
+        width: 55%;
+        font-size: 14px;
+        /* از 16px کوچیک‌تر و کنترل شده */
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        padding: 15px 20px;
+        /* کمی کمتر از قبل که ظریف‌تر بشه */
+        line-height: 1;
+
+        outline: 0;
+        border: 2px solid white;
+        cursor: pointer;
+        position: relative;
+        background: transparent;
+
+        color: black;
+        z-index: 0;
+
+        text-decoration: none;
+
+    }
+
+    .button-52::after {
+        content: "";
+        background-color: #d5ac5a;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        transition: 0.4s ease;
+        z-index: -1;
+    }
+
+    .button-52:hover::after {
+        top: 0;
+        left: 0;
+    }
+
+    .website {
+        display: flex;
+
+        gap: 10px;
+
+        .heading-frame1 {
+            display: grid;
+            box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
+            grid-template-columns: -webkit-max-content auto;
+            grid-template-columns: max-content auto;
+            grid-template-rows: auto max-content;
+            background: #333 url(../images/watches/rolex.jpg) center;
+            background-size: cover;
+            filter: grayscale(100%);
+            transform: scale(1);
+            transition:
+                filter 0.4s ease-in-out,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+            color: white;
+            width: 780px;
+            height: 370px;
+            padding: 2rem;
+        }
+
+        .heading-frame1:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+        }
+
+        .heading-frame1:before,
+        .heading-frame1:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .heading-frame1:before {
+            grid-row: 1/2;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .heading-frame1:after {
+            grid-row: 1/span 2;
+            border-left: none;
+        }
+
+        .heading-frame1 h2 {
+            margin: 1rem 1rem -0.5rem 0;
+            font-family: "Geologica", sans-serif;
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+
+    /* خود فوتر از دو ستونه → ستونی */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .left-footer,
+    .right-footer {
+        width: 100% !important;
+    }
+
+    /* تصویر سمت چپ فوتر */
+    .left-footer img {
+        width: 65%;
+        max-width: 230px;
+    }
+
+    .left-footer h3 {
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+        line-height: 1.5;
+    }
+
+    /* خط عمودی وسط، تو موبایل حذف می‌شه */
+    .vl {
+        display: none;
+    }
+
+    /* ستون راست (آدرس) */
+    .right-footer {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .address {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        flex-wrap: wrap;
+    }
+
+    .address svg {
+        margin-right: 0.5rem;
+    }
+
+    .address b {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    /* خط جداکننده زیر فوتر کمی بهش فاصله بدیم */
+    .hr-text {
+        margin-top: -1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* کپی‌رایت پایین صفحه */
+    .copyright {
+        flex-direction: row;
+        gap: 0.5rem;
+        padding: 1rem;
+        margin-top: 0 !important;
+        text-align: center;
+    }
+
+    .copyright strong {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:1201px) {
+    .banner-text {
+        margin-top: -50px;
+    }
+
+    .aboutus {
+        width: 80%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: stretch;
+        /* هر دو ستون هم‌ارتفاع */
+    }
+
+    .aboutus .img,
+    .aboutus .text-section {
+        flex: 1 1 0;
+        /* دو ستون مساوی */
+    }
+
+    .aboutus .img img {
+        width: 100%;
+        height: 100%;
+        /* اینجا جادو اتفاق می‌افته */
+        object-fit: cover;
+        /* عکس قشنگ کراپ میشه، کش نمیاد */
+        display: block;
+    }
+}
