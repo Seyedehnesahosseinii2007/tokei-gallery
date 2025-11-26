@@ -28,7 +28,6 @@ body {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-/* تصویر بنر: پوشش کامل و واکنش‌گرا */
 .banner img {
     display: block;
     width: 100%;
@@ -36,19 +35,18 @@ body {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px0px;
     max-width: none;
     object-fit: cover;
-    /* کراپ هوشمند برای پوشش کامل */
+
 }
 
-/* واکنش‌گرا: قواعد ارتفاع در موبایل */
+
 @media (max-width: 640px) {
     .banner img {
         height: 260px;
     }
 }
 
-/* ...existing code... */
-/* ...existing code... */
 
+/* for the title banner */
 .banner-text {
     margin: 16px auto;
     text-align: center;
@@ -61,12 +59,11 @@ body {
 
 }
 
-/* تصحیح نام keyframes (مطابقت با animation-name) */
+/* motion text banner  */
 @keyframes moveInBottom {
     0% {
         opacity: 0;
         transform: translateY(3rem);
-        /* از پایین بیاد بالا: مثبت به منفی یا برعکس بسته به نیاز */
     }
 
     100% {
@@ -107,44 +104,7 @@ body {
     background-color: #fcfcfa;
 }
 
-
-.sketchy {
-    padding: 2rem 2rem;
-    display: inline-block;
-    border: 3px solid #9493907a;
-    font-size: 1rem;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    text-transform: uppercase;
-    letter-spacing: 0.3ch;
-    background: #344966;
-    position: relative;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 400px;
-    box-shadow: rgba(214, 214, 214, 0.822) 0px 2px 8px0px;
-
-    &::before {
-        content: "";
-        border: 2px solid#9493907a;
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        box-shadow: rgba(214, 214, 214, 0.822) 0px 2px 8px 0px;
-        top: 50%;
-        left: 50%;
-        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-    }
-
-    .detail {
-        font-family: "Geologica", sans-serif;
-    }
-}
-
+/* picture instagram */
 /* start frame for section instagram */
 .heading-frame {
     display: grid;
@@ -222,7 +182,7 @@ body {
 
 
 
-/* خط بالا */
+
 .instagram-text::before {
     content: "";
     position: absolute;
@@ -244,6 +204,7 @@ body {
     background: linear-gradient(to right, transparent, #344966, transparent);
 }
 
+/* button for links */
 .button-52 {
     display: inline-flex;
     /* مثل یک دکمه واقعی */
@@ -331,7 +292,7 @@ body {
     background: linear-gradient(to right, transparent, #344966, transparent);
 }
 
-
+/* start for website */
 .heading-frame1 {
     display: grid;
     box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
@@ -386,6 +347,7 @@ body {
     max-width: 100%;
 }
 
+/* end for website */
 /* endframe for section website */
 @keyframes slide-in-left {
     from {
@@ -428,6 +390,8 @@ body {
     animation: slide-in-right 2s ease-out forwards;
 }
 
+/* vertical line */
+
 .vl {
 
 
@@ -453,6 +417,7 @@ body {
     content: "";
 }
 
+/* section about us */
 .aboutus {
     background-color: #678bb642;
     box-shadow: 0 3px 6px rgba(255, 255, 255, 0.4);
@@ -480,6 +445,7 @@ body {
     }
 }
 
+/* start responsive */
 @media screen and (max-width:576px) {
     .banner-text {
         margin-top: -230px;
@@ -1662,3 +1628,5 @@ body {
         display: block;
     }
 }
+/* 
+end responsive */ 
