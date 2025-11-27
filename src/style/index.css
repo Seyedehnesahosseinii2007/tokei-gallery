@@ -59,6 +59,39 @@ body {
 
 }
 
+@keyframes luxFade {
+    0% {
+        opacity: 0;
+        transform: translateY(35px) scale(0.98);
+        filter: blur(6px);
+    }
+
+    60% {
+        opacity: 0.8;
+        filter: blur(1px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes barIn {
+    0% {
+        width: 0;
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    100% {
+        width: 120px;
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
 /* motion text banner  */
 @keyframes moveInBottom {
     0% {
@@ -1627,6 +1660,82 @@ body {
         /* عکس قشنگ کراپ میشه، کش نمیاد */
         display: block;
     }
+
+    /* خود فوتر از دو ستونه → ستونی */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .left-footer,
+    .right-footer {
+        width: 100% !important;
+    }
+
+    /* تصویر سمت چپ فوتر */
+    .left-footer img {
+        width: 65%;
+        max-width: 230px;
+    }
+
+    .left-footer h3 {
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+        line-height: 1.5;
+    }
+
+    /* خط عمودی وسط، تو موبایل حذف می‌شه */
+    .vl {
+        display: none;
+    }
+
+    /* ستون راست (آدرس) */
+    .right-footer {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .address {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        flex-wrap: wrap;
+    }
+
+    .address svg {
+        margin-right: 0.5rem;
+    }
+
+    .address b {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    /* خط جداکننده زیر فوتر کمی بهش فاصله بدیم */
+    .hr-text {
+        margin-top: -1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* کپی‌رایت پایین صفحه */
+    .copyright {
+        flex-direction: row;
+        gap: 0.5rem;
+        padding: 1rem;
+        margin-top: 0 !important;
+        text-align: center;
+    }
+
+    .copyright strong {
+        font-size: 0.85rem;
+        text-align: center;
+    }
 }
+
 /* 
-end responsive */ 
+end responsive */
